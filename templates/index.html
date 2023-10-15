@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center">Select the difficulty of the questions</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 bg-primary text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Easy Questions</h5>
+                    <p class="card-text">Python Interview Questions and Answers for Beginners.</p>
+                    <h5>Number of questions: {{ easy_question_count }}</h5>
+                    <a href="{% url 'easy_page' %}" class="btn btn-light">Start</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 bg-warning text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Medium Questions</h5>
+                    <p class="card-text">Python Interview Questions and Answers for Intermediates.</p>
+                    <h5>Number of questions: {{ medium_question_count }}</h5>
+                    <a href="{% url 'medium_page' %}" class="btn btn-light">Start</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title">Hard Questions</h5>
+                    <p class="card-text">Python Interview Questions and Answers for Experienced.</p>
+                    <h5>Number of questions: {{ hard_question_count }}</h5>
+                    <a href="{% url 'hard_page' %}" class="btn btn-light">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
