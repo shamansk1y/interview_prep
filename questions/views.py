@@ -17,8 +17,7 @@ def index(request):
 
 
 def easy_page(request):
-    easy_question = list(Question.objects.filter(difficulty='Easy'))
-    random.shuffle(easy_question)
+    easy_question = Question.objects.filter(difficulty='Easy')
     count = 1
     paginator = Paginator(easy_question, count)
     page = request.GET.get('page')
@@ -31,8 +30,7 @@ def easy_page(request):
     return render(request, 'easy.html', context=context)
 
 def medium_page(request):
-    medium_question = len(Question.objects.filter(difficulty='Medium'))
-    random.shuffle(medium_question)
+    medium_question = Question.objects.filter(difficulty='Medium')
     count = 1
     paginator = Paginator(medium_question, count)
     page = request.GET.get('page')
@@ -46,8 +44,7 @@ def medium_page(request):
 
 
 def hard_page(request):
-    hard_question = len(Question.objects.filter(difficulty='Hard'))
-    random.shuffle(hard_question)
+    hard_question = Question.objects.filter(difficulty='Hard')
     count = 1
     paginator = Paginator(hard_question, count)
     page = request.GET.get('page')
