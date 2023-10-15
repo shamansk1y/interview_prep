@@ -22,7 +22,7 @@ DB_PORT = os.environ.get('DB_PORT')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['questions-for-interview-d6b7d7f7a51c.herokuapp.com']
 
 
 # Application definition
